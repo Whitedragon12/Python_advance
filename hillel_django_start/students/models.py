@@ -6,8 +6,14 @@ class Student(models.Model):
     last_name = models.CharField(max_length=50)
     age = models.IntegerField()
 
+    def __str__(self):
+        return f'{self.first_name} {self.last_name} {self.age}'
+
 
 class Teacher(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     subject = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name} {self.subject}'
