@@ -15,7 +15,7 @@ def generate_student(request):
 
 
 def generate_students(request):
-    count = request.GET.get('count', 1)
+    count = request.GET.get('count', 10)
     try:
         count = int(count)
         if count < 1 or count > 100:
